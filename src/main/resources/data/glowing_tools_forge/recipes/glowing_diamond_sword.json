@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_sword",
+      "count": 1
+    },
+    {
+      "item": "minecraft:torch",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "glowing_tools_forge:glowing_diamond_sword",
+    "count": 1
+  }
+}
