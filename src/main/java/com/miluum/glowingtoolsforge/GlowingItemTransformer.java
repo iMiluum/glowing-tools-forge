@@ -150,19 +150,19 @@ public class GlowingItemTransformer {
         GlowingAxeItem glowingTool;
         Tier material = axe.getTier();
         if (material.equals(Tiers.WOOD))
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.WOOD);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_wooden_axe");
         else if (material.equals(Tiers.STONE))
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.STONE);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_stone_axe");
         else if (material.equals(Tiers.IRON))
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.IRON);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_iron_axe");
         else if (material.equals(Tiers.GOLD))
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.GOLD);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_golden_axe");
         else if (material.equals(Tiers.DIAMOND))
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.DIAMOND);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_diamond_axe");
         else if (material.equals(Tiers.NETHERITE))
-            glowingTool = (GlowingAxeItem) ForgeRegistries.ITEMS.getValue(new ResourceLocation(MODID, "glowing_netherite_axe"));
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_netherite_axe");
         else
-            glowingTool = (GlowingAxeItem) GlowingItems.createAxeItem(Tiers.WOOD);
+            glowingTool = (GlowingAxeItem) getItemFromRegistry("glowing_wooden_axe");
 
         return new ItemStack(glowingTool);
     }
@@ -171,19 +171,19 @@ public class GlowingItemTransformer {
         GlowingHoeItem glowingTool;
         Tier material = hoe.getTier();
         if (material.equals(Tiers.WOOD))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.WOOD, 0, -3.0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_wooden_hoe");
         else if (material.equals(Tiers.STONE))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.STONE, -1, -2.0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_stone_hoe");
         else if (material.equals(Tiers.IRON))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.IRON, -2, -1.0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_iron_hoe");
         else if (material.equals(Tiers.GOLD))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.GOLD, 0, -3.0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_golden_hoe");
         else if (material.equals(Tiers.DIAMOND))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.DIAMOND, -3, 0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_diamond_hoe");
         else if (material.equals(Tiers.NETHERITE))
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.NETHERITE, -4, 0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_netherite_hoe");
         else
-            glowingTool = (GlowingHoeItem) GlowingItems.createHoeItem(Tiers.WOOD, 0, -3.0f);
+            glowingTool = (GlowingHoeItem) getItemFromRegistry("glowing_wooden_hoe");
 
         return new ItemStack(glowingTool);
     }
@@ -192,19 +192,19 @@ public static ItemStack getGlowingPickaxeStack(PickaxeItem pickaxe){
         GlowingPickaxeItem glowingTool;
         Tier material = pickaxe.getTier();
         if (material.equals(Tiers.WOOD))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.WOOD);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_wooden_pickaxe");
         else if (material.equals(Tiers.STONE))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.STONE);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_stone_pickaxe");
         else if (material.equals(Tiers.IRON))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.IRON);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_iron_pickaxe");
         else if (material.equals(Tiers.GOLD))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.GOLD);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_golden_pickaxe");
         else if (material.equals(Tiers.DIAMOND))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.DIAMOND);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_diamond_pickaxe");
         else if (material.equals(Tiers.NETHERITE))
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.NETHERITE);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_netherite_pickaxe");
         else
-            glowingTool = (GlowingPickaxeItem) GlowingItems.createPickaxeItem(Tiers.WOOD);
+            glowingTool = (GlowingPickaxeItem) getItemFromRegistry("glowing_wooden_pickaxe");
 
         return new ItemStack(glowingTool);
     }
@@ -213,19 +213,19 @@ public static ItemStack getGlowingShovelStack(ShovelItem shovel){
         GlowingShovelItem glowingTool;
         Tier material = shovel.getTier();
         if (material.equals(Tiers.WOOD))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.WOOD);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_wooden_shovel");
         else if (material.equals(Tiers.STONE))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.STONE);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_stone_shovel");
         else if (material.equals(Tiers.IRON))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.IRON);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_iron_shovel");
         else if (material.equals(Tiers.GOLD))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.GOLD);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_golden_shovel");
         else if (material.equals(Tiers.DIAMOND))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.DIAMOND);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_diamond_shovel");
         else if (material.equals(Tiers.NETHERITE))
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.NETHERITE);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_netherite_shovel");
         else
-            glowingTool = (GlowingShovelItem) GlowingItems.createShovelItem(Tiers.WOOD);
+            glowingTool = (GlowingShovelItem) getItemFromRegistry("glowing_wooden_shovel");
 
         return new ItemStack(glowingTool);
     }
@@ -234,21 +234,25 @@ public static ItemStack getGlowingShovelStack(ShovelItem shovel){
         GlowingSwordItem glowingTool;
         Tier material = sword.getTier();
         if (material.equals(Tiers.WOOD))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.WOOD);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_wooden_sword");
         else if (material.equals(Tiers.STONE))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.STONE);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_stone_sword");
         else if (material.equals(Tiers.IRON))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.IRON);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_iron_sword");
         else if (material.equals(Tiers.GOLD))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.GOLD);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_golden_sword");
         else if (material.equals(Tiers.DIAMOND))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.DIAMOND);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_diamond_sword");
         else if (material.equals(Tiers.NETHERITE))
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.NETHERITE);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_netherite_sword");
         else
-            glowingTool = (GlowingSwordItem) GlowingItems.createSwordItem(Tiers.WOOD);
+            glowingTool = (GlowingSwordItem) getItemFromRegistry("glowing_wooden_sword");
 
         return new ItemStack(glowingTool);
+    }
+
+    public static Item getItemFromRegistry(String path){
+        return ForgeRegistries.ITEMS.getValue(new ResourceLocation(MODID, path));
     }
 
     public static boolean placeTorch(Level world, BlockPos pos, Direction side, Player miner){
@@ -332,15 +336,11 @@ public static ItemStack getGlowingShovelStack(ShovelItem shovel){
 
     @SubscribeEvent
     public static void onPlayerInteract(PlayerInteractEvent.RightClickBlock event) {
-        LOGGER.info("---------");
-        event.setUseBlock(Event.Result.ALLOW);
-        event.setUseBlock(Event.Result.DENY);
         InteractionResult result = pickUpTorch(
                 event.getEntity(),
                 event.getLevel(),
                 event.getHand(),
                 event.getHitVec()
         );
-        LOGGER.info("Result: " + result.toString());
     }
 }
