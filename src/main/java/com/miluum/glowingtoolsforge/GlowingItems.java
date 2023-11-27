@@ -20,7 +20,7 @@ public class GlowingItems {
                 material,
                 1,
                 -2.8f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties()
         );
         itemList.add(createdItem);
         return createdItem;
@@ -43,7 +43,7 @@ public class GlowingItems {
                 material,
                 attackDamage,
                 attackSpeed,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties()
         );
         itemList.add(createdItem);
         return createdItem;
@@ -54,7 +54,7 @@ public class GlowingItems {
                 material,
                 1.5f,
                 -3.0f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties()
         );
         itemList.add(createdItem);
         return createdItem;
@@ -65,7 +65,7 @@ public class GlowingItems {
                 material,
                 3,
                 -2.4f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties()
         );
         itemList.add(createdItem);
         return createdItem;
@@ -76,7 +76,7 @@ public class GlowingItems {
                 material,
                 attackDamage,
                 attackSpeed,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties()
 
         );
         itemList.add(createdItem);
