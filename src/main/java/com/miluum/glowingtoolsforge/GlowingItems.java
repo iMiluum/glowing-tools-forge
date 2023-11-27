@@ -1,8 +1,6 @@
 package com.miluum.glowingtoolsforge;
 
 import net.minecraft.world.item.*;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
@@ -14,9 +12,10 @@ import static com.miluum.glowingtoolsforge.GlowingTools.ITEMS;
 
 public class GlowingItems {
     public static final List<Item> itemList = new ArrayList<>();
+    public static final Set<RegistryObject<Item>> registeredItems = new HashSet<>();
 
 
-    private static Item createPickaxeItem(Tier material){
+    public static Item createPickaxeItem(Tier material){
         Item createdItem = new GlowingPickaxeItem(
                 material,
                 1,
@@ -27,19 +26,19 @@ public class GlowingItems {
         return createdItem;
     }
 
-    private static Item createAxeItem(Tier material){
+    public static Item createAxeItem(Tier material){
         return createAxeItem(material, 6, -3.2f);
     }
 
-    private static Item createAxeItem(Tier material, int attackDamage){
+    public static Item createAxeItem(Tier material, int attackDamage){
         return createAxeItem(material, attackDamage, -3.2f);
     }
 
-    private static Item createAxeItem(Tier material, float attackSpeed){
+    public static Item createAxeItem(Tier material, float attackSpeed){
         return createAxeItem(material, 6, attackSpeed);
     }
 
-    private static Item createAxeItem(Tier material, int attackDamage, float attackSpeed){
+    public static Item createAxeItem(Tier material, int attackDamage, float attackSpeed){
         Item createdItem = new GlowingAxeItem(
                 material,
                 attackDamage,
@@ -50,7 +49,7 @@ public class GlowingItems {
         return createdItem;
     }
 
-    private static Item createShovelItem(Tier material){
+    public static Item createShovelItem(Tier material){
         Item createdItem = new GlowingShovelItem(
                 material,
                 1.5f,
@@ -61,7 +60,7 @@ public class GlowingItems {
         return createdItem;
     }
 
-    private static Item createSwordItem(Tier material){
+    public static Item createSwordItem(Tier material){
         Item createdItem = new GlowingSwordItem(
                 material,
                 3,
@@ -72,8 +71,8 @@ public class GlowingItems {
         return createdItem;
     }
 
-    private static Item createHoeItem(Tier material, int attackDamage, float attackSpeed){
-        Item createdItem = new GlowingHoeItem(
+    public static Item createHoeItem(Tier material, int attackDamage, float attackSpeed){
+        HoeItem createdItem = new GlowingHoeItem(
                 material,
                 attackDamage,
                 attackSpeed,
@@ -85,8 +84,6 @@ public class GlowingItems {
     }
 
     public static Set<RegistryObject<Item>> registerItems(){
-        Set<RegistryObject<Item>> registeredItems = new HashSet<>();
-
         registeredItems.add(ITEMS.register("glowing_netherite_pickaxe", () -> createPickaxeItem(Tiers.NETHERITE)));
         registeredItems.add(ITEMS.register("glowing_diamond_pickaxe", () -> createPickaxeItem(Tiers.DIAMOND)));
         registeredItems.add(ITEMS.register("glowing_golden_pickaxe", () -> createPickaxeItem(Tiers.GOLD)));
