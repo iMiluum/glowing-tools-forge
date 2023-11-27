@@ -1,14 +1,17 @@
 package com.miluum.glowingtoolsforge;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.ObjectHolder;
 import org.slf4j.Logger;
 
 @Mod(GlowingTools.MODID)
@@ -16,6 +19,9 @@ public class GlowingTools {
     public static final String MODID = "glowing_tools_forge";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+    public static final GlowingToolsTab GLOWING_TOOLS_TAB = new GlowingToolsTab();
+
 
     public GlowingTools() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
