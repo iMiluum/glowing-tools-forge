@@ -20,12 +20,12 @@ import static com.miluum.glowingtoolsforge.GlowingTools.MODID;
 @Mod.EventBusSubscriber(modid=MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
 public class AddPackFinderEvent {
     @SubscribeEvent
-    public void addPackFinders(AddPackFindersEvent event)
+    public static void addPackFinders(AddPackFindersEvent event)
     {
         if (event.getPackType() == PackType.CLIENT_RESOURCES)
         {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("resources/legacy_glowing_tools");
-            var pack = Pack.readMetaAndCreate("builtin/legacy_glowing_tools", Component.literal("Legacy Glowing Tools"), false,
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("resourcepacks/legacy_glowing_tools");
+            var pack = Pack.readMetaAndCreate("builtin/glowing_tools_forge", Component.literal("Legacy Glowing Tools"), false,
                     (path) -> new PathPackResources(path, true, resourcePath), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
             event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
         }
