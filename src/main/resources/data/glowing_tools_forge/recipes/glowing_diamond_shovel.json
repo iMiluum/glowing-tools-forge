@@ -4,11 +4,13 @@
   "ingredients": [
     {
       "item": "minecraft:diamond_shovel",
+      "data": 0,
       "count": 1
     },
     {
       "item": "minecraft:torch",
-      "count": 1
+      "count": 1,
+      "data": 0
     }
   ],
   "result": {
