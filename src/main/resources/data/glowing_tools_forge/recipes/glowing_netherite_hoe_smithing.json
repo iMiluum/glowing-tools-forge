@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+
+  "base": {
+      "item": "glowing_tools_forge:glowing_diamond_hoe"
+  },
+  "addition": {
+      "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+      "item": "glowing_tools_forge:glowing_netherite_hoe"
+  }
+}
