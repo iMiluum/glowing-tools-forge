@@ -20,8 +20,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static com.miluum.glowingtoolsforge.GlowingTools.LOGGER;
-import static com.miluum.glowingtoolsforge.GlowingTools.MODID;
+import static com.miluum.glowingtoolsforge.GlowingTools.*;
 
 @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class GlowingItemTransformer {
