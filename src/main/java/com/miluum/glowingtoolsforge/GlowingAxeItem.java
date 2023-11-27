@@ -32,7 +32,7 @@ public class GlowingAxeItem extends AxeItem implements GlowingItem {
 
         assert miner != null;
         if (miner.isCrouching()) GlowingItemTransformer.transformGlowingTool(stack, world, pos, miner, side);
-        else super.useOn(context);
+        else return super.useOn(context);
 
         return InteractionResult.SUCCESS;
     }
