@@ -25,24 +25,24 @@ public class GlowingTools {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> REGISTRAR = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final RegistryObject<CreativeModeTab> GLOWING_TOOLS_TAB = REGISTRAR.register("tools", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.glowing_tools.tools"))
-            .icon(() -> new ItemStack(GlowingItemTransformer.getItemFromRegistry("glowing_netherite_pickaxe")))
-            .displayItems((params, output) -> {
-                for (Item item : GlowingItems.itemList) output.accept(item);
-            })
-            .build()
+        .title(Component.translatable("itemGroup.glowing_tools.tools"))
+        .icon(() -> new ItemStack(GlowingItemTransformer.getItemFromRegistry("glowing_netherite_pickaxe")))
+        .displayItems((params, output) -> {
+            for (Item item : GlowingItems.itemList) output.accept(item);
+        })
+        .build()
     );
 
 
     public GlowingTools() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(AddPackFinderEvent::addPackFinders);
         GlowingItems.registerItems();
         REGISTRAR.register(modEventBus);
         ITEMS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(GlowingItemTransformer.class);
-        modEventBus.register(AddPackFinderEvent.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
