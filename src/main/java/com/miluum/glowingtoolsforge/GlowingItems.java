@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static com.miluum.glowingtoolsforge.GlowingTools.GLOWING_TOOLS_TAB;
 import static com.miluum.glowingtoolsforge.GlowingTools.ITEMS;
 
 public class GlowingItems {
@@ -20,7 +21,7 @@ public class GlowingItems {
                 material,
                 1,
                 -2.8f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties().tab(GLOWING_TOOLS_TAB)
         );
         itemList.add(createdItem);
         return createdItem;
@@ -43,7 +44,7 @@ public class GlowingItems {
                 material,
                 attackDamage,
                 attackSpeed,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties().tab(GLOWING_TOOLS_TAB)
         );
         itemList.add(createdItem);
         return createdItem;
@@ -54,7 +55,7 @@ public class GlowingItems {
                 material,
                 1.5f,
                 -3.0f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties().tab(GLOWING_TOOLS_TAB)
         );
         itemList.add(createdItem);
         return createdItem;
@@ -65,7 +66,7 @@ public class GlowingItems {
                 material,
                 3,
                 -2.4f,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties().tab(GLOWING_TOOLS_TAB)
         );
         itemList.add(createdItem);
         return createdItem;
@@ -76,7 +77,7 @@ public class GlowingItems {
                 material,
                 attackDamage,
                 attackSpeed,
-                new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)
+                new Item.Properties().tab(GLOWING_TOOLS_TAB)
 
         );
         itemList.add(createdItem);
