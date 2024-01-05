@@ -21,12 +21,13 @@ Currently translated:
 
 - English (US)
 - Lolcat
+- Chinese (contributed by [@oritong](https://github.com/oritong), thank you!)
 
 Help with translations would be very appreciated!
 
 ## Requirements
 - Forge
-- DynamicLights Reforged
+- DynamicLights Reforged (for 1.20.2, use the 1.20.1 version, if there is no version available for it)
 
 ## Gallery
 ![Image of glowing axes](https://raw.githubusercontent.com/iMiluum/glowing-tools-fabric/main/img/glowing_axes.png)
