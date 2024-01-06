@@ -37,3 +37,6 @@ jobs:
         arguments: build
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.0.0
+      with:
+        name: Artifacts
+        path: build/libs/
